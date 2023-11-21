@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reg Form</title>
+    <script src="website.js"></script>
+    <style>
+        body {
+            background-image: url(image/regcoffee.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+            font-size: 50px;
+            margin-top: 0px;
+        }
+
+        .container {
+            width: 40%;
+            color: white;
+            box-shadow: 10px;
+            position: absolute;
+            top: 15%;
+            left: 28%;
+            height: 63%;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        form {
+            align-items: center;
+        }
+
+        input {
+            display: block;
+            margin: 10px;
+            padding: 5px;
+            border: none;
+            border-bottom: 2px solid bisque;
+            background: transparent;
+            border-radius: 10px;
+            /* background: linear-gradient(45deg, #610000b8, transparent); */
+            color: aqua;
+            font-size: 15px;
+            width: 50%;
+            outline: none;
+            box-sizing: border-box;
+            animation-name: input1;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+
+        }
+
+        @keyframes input1 {
+            from {
+                margin-left: 130%;
+            }
+
+            to {
+                margin-left: 2%;
+            }
+        }
+
+        .container ::placeholder {
+            color: aliceblue;
+            font-size: 12px;
+        }
+
+        label {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 10px;
+            animation-name: label1;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes label1 {
+            from {
+                margin-left: -100%;
+            }
+
+            to {
+                margin-left: 2%;
+            }
+        }
+
+        button {
+            text-align: center;
+            padding: 6px;
+            border-radius: 10px;
+            margin-left: 10px;
+            color: black;
+            background-color: thistle;
+            font-size: 13px;
+            font-weight: bold;
+            border: none;
+            margin-bottom: 4px;
+            position: absolute;
+            right: 2%;
+            cursor: pointer;
+        }
+        #message{
+            color: whitesmoke;
+            display: none;
+            position: absolute;
+            bottom: 7%;
+            left: 25%;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        #message p{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <div class="container">
+        <form>
+            <label for="fn">First Name</label>
+            <input type="text" id="fn">
+            <label for="ln">Last Name</label>
+            <input type="text" id="ln">
+            <label for="em">E-Mail</label>
+            <input type="email" name="E-mail" id="em">
+            <label for="ps">Password</label>
+            <input type="password" name="" id="pass">
+            <label for="reps">Confirm Password</label>
+            <input type="password" name="" id="confi">
+        </form>
+        <button onclick="pass()">Sign Up</button>
+    </div>
+    <div id="message">
+        <hp>**password must contain</p>
+        <p id="letter"> lowercase</p>
+        <p id="capital"> ,uppercase</p>
+        <p id="number">  and number**</p>
+    </div>
+      <script>
+        var pas=document.getElementById('pass');
+        pas.onfocus=function(){
+            document.getElementById('message').style.display="block";
+        }
+        pas.onblur=function(){
+            document.getElementById('message').style.display="none";
+        }
+    </script>
+</body>
+
+</html>

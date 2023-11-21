@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background: url(image/gal2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            /* border: 1px solid red; */
+            width: 60%;
+            background: rgb(0, 25, 164);
+            background: linear-gradient(117deg, rgba(0, 25, 164, 1) 50%, rgba(0, 0, 0, 1) 50%);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            border-radius: 10px;
+            box-shadow: rgb(0 0 0 / 69%) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .box1 {
+            width: 50%;
+            text-align: center;
+        }
+
+        .box2 {
+            width: 50%;
+            text-align: center;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            color: whitesmoke;
+            margin-top: 200px;
+            font-size: 15px;
+        }
+
+        .header {
+            width: 100%;
+            height: 28px;
+            background-color: black;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+        
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid #a7a7a7;
+            outline: none;
+            display: block;
+            padding: 19px 0px 7px 0px;
+            width: 70%;
+            color: white;
+            margin-top: 20px;
+        }
+
+        textarea {
+            background-color: #2e2e2e;
+            width: 70%;
+            border: none;
+            border-bottom: 2px solid #a7a7a7;
+            outline: none;
+            display: block;
+            color: white;
+            margin-top: 25px;
+            border-radius: 7px;
+        }
+
+        .red {
+            background-color: red;
+            width: 1%;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .yellow {
+            background-color: yellow;
+            width: 1%;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .blue {
+            background-color: blue;
+            width: 1%;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .color {
+            display: inline-block;
+            width: 100%;
+            margin: 6px 0px 0px 12px;
+        }
+
+        .send {
+            background: transparent;
+            color: red;
+            font-weight: bold;
+            margin-top: 13px;
+            border: 2px solid red;
+            border-radius: 7px;
+            padding: 6px;
+            position: relative;
+            left: 50px;
+            cursor: pointer;
+        }
+        .send:hover{
+            color: green;
+            border: 2px solid green;
+        }
+
+        .but {
+            margin-top: 6px;
+            margin-bottom: 15px;
+
+        }
+
+        ::placeholder {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="color">
+
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="blue"></div>
+            </div>
+        </div>
+        <div class="flex">
+            <div class="box1">
+                <h1>CONTACT US</h1>
+                <p>Contact Info: +91&nbsp;999&nbsp;888&nbsp;4444<br>
+                    Email-Id: sujeetcafe@gmail.com
+                </p>
+            </div>
+            <div id="cancel" class="box2">
+                <input id="names" class="input" type="text" placeholder="Name">
+                <input id="email" class="input" type="email" name="" id="" placeholder="example123@gmail.com">
+                <input id="number" class="input" type="text" placeholder="987654321">
+                <textarea id="text" class="input" cols="30" rows="4" placeholder="Write your Message"></textarea>
+                <div class="but">
+                    <button onclick="contact()" class="send">SEND</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="website.js"></script>
+</body>
+
+</html>
